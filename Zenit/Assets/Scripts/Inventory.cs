@@ -39,6 +39,8 @@ public class Inventory : MonoBehaviour
             AddItem(i, data.items[Random.Range(0, data.items.Count)], Random.Range(1, 64));
         }
         UpdateInventory();
+        backGround.SetActive(false);
+       
     }
     public void Update()
     {
