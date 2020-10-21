@@ -19,13 +19,13 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        if (Player.transform.position.x > 45.6f)
+        if (Player.transform.position.x > 45.0f)
         {
             float verticalInput = Player.transform.position.y ;
-            transform.position = new Vector3(45.6f, verticalInput, -5.0f) + offset;
+            transform.position = new Vector3(45.0f, verticalInput, -5.0f) + offset;
             if (Player.transform.position.y <= -15.0f)
             {
-                transform.position = new Vector3(45.6f, -15.0f, -5.0f) + offset;
+                transform.position = new Vector3(45.0f, -15.0f, -5.0f) + offset;
             }
         }
         else
