@@ -36,7 +36,15 @@ public class Inventory : MonoBehaviour
         }
         for (int i = 0; i < maxCount; i++)  //для теста
         {
-            AddItem(i, data.items[Random.Range(0, data.items.Count)], Random.Range(1, 64));
+            int q = Random.Range(0, data.items.Count);
+            if (q == 0)
+            {
+                AddItem(i, data.items[q], 0);
+            }
+            else
+            {
+                AddItem(i, data.items[q], Random.Range(1, 64));
+            }
         }
         UpdateInventory();
         backGround.SetActive(false);
@@ -44,7 +52,7 @@ public class Inventory : MonoBehaviour
     }
     public void Update()
     {
-        if (currentId != -1)
+        if ((currentId != -1) && ( currentId != 0))
         {
             MoveObject();
         }
@@ -84,7 +92,7 @@ public class Inventory : MonoBehaviour
 
         if (count > 0)
         {
-            for (int i =0; i < maxCount; i++)
+            for (int i = 0; i < maxCount; i++)
             {
                 if (items[i].id == 0)
                 {
@@ -170,6 +178,7 @@ public class Inventory : MonoBehaviour
 
     public void SelectObject()
     {
+        
         if (currentId == -1)
         {
             currentId = int.Parse(es.currentSelectedGameObject.name);
@@ -178,7 +187,7 @@ public class Inventory : MonoBehaviour
             movingObject.GetComponent<Image>().sprite = data.items[currentItem.id].img;
 
             AddItem(currentId, data.items[0], 0);
-         }
+        }
         else
         {
             ItemInventory II = items[int.Parse(es.currentSelectedGameObject.name)];
@@ -199,13 +208,17 @@ public class Inventory : MonoBehaviour
                     AddItem(currentId, data.items[II.id], II.count + currentItem.count - 64);
                     II.count = 64;
                 }
-
-                II.itemGameObj.GetComponentInChildren<Text>().text = II.count.ToString();
+                if (II.id != 0)
+                {
+                    II.itemGameObj.GetComponentInChildren<Text>().text = II.count.ToString();
+                }
             }
             currentId = -1;
 
             movingObject.gameObject.SetActive(false);
+
         }
+        
     }
 
     public void MoveObject()

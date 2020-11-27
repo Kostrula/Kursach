@@ -11,7 +11,7 @@ public class DialogeTrigger : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space) && playerInRange)
+        if(Input.GetKey(KeyCode.E) && playerInRange)
         {
             TriggerDialogue();
         }
