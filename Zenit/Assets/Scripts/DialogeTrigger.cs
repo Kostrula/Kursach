@@ -8,10 +8,13 @@ public class DialogeTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     private bool playerInRange;
+    public Signal contextOn;
+    public Signal contextOff;
+
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.E) && playerInRange)
+        if (Input.GetKey(KeyCode.E) && playerInRange)
         {
             TriggerDialogue();
         }
@@ -27,12 +30,14 @@ public class DialogeTrigger : MonoBehaviour
         if (collider.CompareTag("Player"))
         {
             playerInRange = true;
+            contextOn.Raise();
         }
     }
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
+            contextOff.Raise();
             playerInRange = false;
         }
     }
