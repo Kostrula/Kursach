@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 149127544}
   - component: {fileID: 149127543}
   - component: {fileID: 149127542}
+  - component: {fileID: 149127545}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -365,9 +366,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Man Near Lake
+    name: "\u041C\u0443\u0436\u0447\u0438\u043D\u0430 \u0443 \u043E\u0437\u0435\u0440\u0430"
     sentences:
-    - "\u041D\u0430\u0448\u0435\u043B?"
+    - "\u041D\u0430\u0448\u0435\u043B? \u041C\u043E\u043B\u043E\u0434\u0435\u0446,
+      \u043E\u0442\u043D\u0435\u0441\u0438 \u043E\u0442\u0446\u0443."
+  contextOn: {fileID: 11400000, guid: 0a8e3ba94a9d6874ba1db2b5f30ad72f, type: 2}
+  contextOff: {fileID: 11400000, guid: 4dbf45fa9a8c1044a8717ad26ba47d06, type: 2}
 --- !u!61 &149127543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -420,6 +424,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.91158295, y: 0.94947577}
   m_EdgeRadius: 0
+--- !u!114 &149127545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149127539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b91254f9f9ffb429ce5c3baf34d47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grass: {fileID: 11400000, guid: 3135b4138e2db5c4a9e043c6d1dde827, type: 2}
 --- !u!1 &153547778
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,7 +723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183670879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.06, y: 36.97, z: -5}
+  m_LocalPosition: {x: 44.58, y: 35.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -730,6 +747,7 @@ MonoBehaviour:
   enemyName: Rat
   baseAttack: 1
   moveSpeed: 1.5
+  ratsKilled: {fileID: 11400000, guid: 1244cebd39d33704db83ce9835ce6214, type: 2}
   target: {fileID: 2010201598}
   chaseRadius: 5
   attackRadius: 1
@@ -927,9 +945,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Man Near Lake
+    name: "\u041C\u0443\u0436\u0447\u0438\u043D\u0430 \u0443 \u043E\u0437\u0435\u0440\u0430"
     sentences:
-    - "\u041F\u0440\u0438\u0432\u0435\u0442"
+    - "\u041F\u0440\u0438\u0432\u0435\u0442. \u0422\u0435\u0431\u044F \u043F\u043E\u0441\u043B\u0430\u043B
+      \u0442\u0432\u043E\u0439 \u043E\u0442\u0435\u0446 \u0437\u0430\u0431\u0440\u0430\u0442\u044C
+      \u0442\u0440\u0430\u0432\u044B?"
+    - "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0438 \u0432\u043E\u043D \u0432
+      \u0442\u043E\u043C \u044F\u0449\u0438\u043A\u0435, \u043E\u043D\u0438 \u0434\u043E\u043B\u0436\u043D\u044B
+      \u0431\u044B\u0442\u044C \u0442\u0430\u043C"
+  contextOn: {fileID: 11400000, guid: 0a8e3ba94a9d6874ba1db2b5f30ad72f, type: 2}
+  contextOff: {fileID: 11400000, guid: 4dbf45fa9a8c1044a8717ad26ba47d06, type: 2}
 --- !u!61 &246446320
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -982,6 +1007,230 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.60517883, y: 0.96962833}
   m_EdgeRadius: 0
+--- !u!1 &325864564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1950072526848007163, guid: 9f8f60e1109e9dd4a94b6cfb4b2114f9, type: 3}
+  m_PrefabInstance: {fileID: 1001000482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &347506338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 347506346}
+  - component: {fileID: 347506345}
+  - component: {fileID: 347506344}
+  - component: {fileID: 347506343}
+  - component: {fileID: 347506342}
+  - component: {fileID: 347506341}
+  - component: {fileID: 347506340}
+  - component: {fileID: 347506339}
+  m_Layer: 0
+  m_Name: Rat (2)
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &347506339
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347506338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: -0.26685715}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6241436, y: 0.6466942}
+  m_EdgeRadius: 0
+--- !u!114 &347506340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347506338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c98a5b2f1533a4ca6dac228b74ec16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 2
+  knockTime: 0.2
+  damage: 1
+--- !u!114 &347506341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347506338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85ec39c391424445b796b22dc6165ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  maxHealth: {fileID: 11400000, guid: 403e3ac6cbc2eee488f9d6611ebf967c, type: 2}
+  health: 3
+  enemyName: Rat
+  baseAttack: 1
+  moveSpeed: 1.5
+  ratsKilled: {fileID: 11400000, guid: 1244cebd39d33704db83ce9835ce6214, type: 2}
+  target: {fileID: 2010201598}
+  chaseRadius: 5
+  attackRadius: 1
+  homePosition: {fileID: 0}
+  anim: {fileID: 0}
+--- !u!50 &347506342
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347506338}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &347506343
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347506338}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.27589226}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.43041992, y: 0.44821548}
+  m_EdgeRadius: 0
+--- !u!95 &347506344
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347506338}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4424a820c6a5c0e429899e82a56829e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &347506345
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347506338}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 4454631428275665778, guid: 0b35d5e59b4f0fd4484ab218cc6cfcec, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &347506346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347506338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 46.43, y: 36.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &352641607
 GameObject:
   m_ObjectHideFlags: 0
@@ -4290,7 +4539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974544355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.400002, y: -15.201477, z: -6.3607154}
+  m_LocalPosition: {x: -50, y: -15.201477, z: -6.3607154}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 103827108}
@@ -4326,17 +4575,9 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1501204975}
-    - target: {fileID: 1950072527299343608, guid: 9f8f60e1109e9dd4a94b6cfb4b2114f9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DisplayNextSentence
-      objectReference: {fileID: 0}
     - target: {fileID: 1950072527303985312, guid: 9f8f60e1109e9dd4a94b6cfb4b2114f9, type: 3}
       propertyPath: m_Name
       value: Dialogue_Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1950072527303985312, guid: 9f8f60e1109e9dd4a94b6cfb4b2114f9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1950072527303985316, guid: 9f8f60e1109e9dd4a94b6cfb4b2114f9, type: 3}
       propertyPath: m_Camera
@@ -4650,6 +4891,225 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1261866735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1261866743}
+  - component: {fileID: 1261866742}
+  - component: {fileID: 1261866741}
+  - component: {fileID: 1261866740}
+  - component: {fileID: 1261866739}
+  - component: {fileID: 1261866738}
+  - component: {fileID: 1261866737}
+  - component: {fileID: 1261866736}
+  m_Layer: 0
+  m_Name: Rat (1)
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1261866736
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261866735}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0000009536743, y: -0.26685715}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6241436, y: 0.6466942}
+  m_EdgeRadius: 0
+--- !u!114 &1261866737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261866735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44c98a5b2f1533a4ca6dac228b74ec16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 2
+  knockTime: 0.2
+  damage: 1
+--- !u!114 &1261866738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261866735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c85ec39c391424445b796b22dc6165ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  maxHealth: {fileID: 11400000, guid: 403e3ac6cbc2eee488f9d6611ebf967c, type: 2}
+  health: 3
+  enemyName: Rat
+  baseAttack: 1
+  moveSpeed: 1.5
+  ratsKilled: {fileID: 11400000, guid: 1244cebd39d33704db83ce9835ce6214, type: 2}
+  target: {fileID: 2010201598}
+  chaseRadius: 5
+  attackRadius: 1
+  homePosition: {fileID: 0}
+  anim: {fileID: 0}
+--- !u!50 &1261866739
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261866735}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &1261866740
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261866735}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.27589226}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.43041992, y: 0.44821548}
+  m_EdgeRadius: 0
+--- !u!95 &1261866741
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261866735}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4424a820c6a5c0e429899e82a56829e3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &1261866742
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261866735}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 4454631428275665778, guid: 0b35d5e59b4f0fd4484ab218cc6cfcec, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1261866743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261866735}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.03, y: 36.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1262372318
 GameObject:
@@ -7248,7 +7708,11 @@ PrefabInstance:
     - target: {fileID: 3156292981210000808, guid: 31339524925d1ad46bd92efb6edd2134, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 1620961552}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3156292981210000808, guid: 31339524925d1ad46bd92efb6edd2134, type: 3}
+      propertyPath: dialogBox
+      value: 
+      objectReference: {fileID: 325864564}
     - target: {fileID: 3156292981210000810, guid: 31339524925d1ad46bd92efb6edd2134, type: 3}
       propertyPath: m_Name
       value: DialogueManager
@@ -7517,6 +7981,8 @@ MonoBehaviour:
     - Hi
     - How are you
     - You are welcome
+  contextOn: {fileID: 0}
+  contextOff: {fileID: 0}
 --- !u!61 &1496099461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7554,11 +8020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce31910ebb0f2d41ba58fe48c398dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1620961552 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1950072526848007167, guid: 9f8f60e1109e9dd4a94b6cfb4b2114f9, type: 3}
-  m_PrefabInstance: {fileID: 1001000482}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1752422593
 GameObject:
   m_ObjectHideFlags: 0
@@ -122300,6 +122761,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2010201594, guid: 88296ac501a21ad419fb339a59144ff2, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5170475711458145996, guid: 88296ac501a21ad419fb339a59144ff2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 42.63
@@ -122310,7 +122775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5170475711458145996, guid: 88296ac501a21ad419fb339a59144ff2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5170475711458145996, guid: 88296ac501a21ad419fb339a59144ff2, type: 3}
       propertyPath: m_LocalRotation.x

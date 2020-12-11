@@ -21,6 +21,7 @@ public class HeroMovement : MonoBehaviour
     public FloatValue currentHealth;
     public Signal playerHealthSingal;
     public VectorValue startingPosition;
+    public BoolValue start;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +35,9 @@ public class HeroMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        start.initialValue = false;
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");

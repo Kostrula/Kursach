@@ -18,12 +18,12 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    public IntValue ratsKilled;
 
     private void Awake()
     {
         health = maxHealth.initialValue;
     }
-
     private void Start()
     {
         health = maxHealth.initialValue;
@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            ratsKilled.initialValue++;
             this.gameObject.SetActive(false);
         }
     }

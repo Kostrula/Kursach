@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &137980077
 Transform:
   m_ObjectHideFlags: 0
@@ -529,10 +529,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  speed: 40
+  speed: 4
   currentHealth: {fileID: 11400000, guid: 42c75f5011623b14e96df7eb13369893, type: 2}
   playerHealthSingal: {fileID: 11400000, guid: 0f0be1a102774af4bbeaa4cc7ab1b32c, type: 2}
   startingPosition: {fileID: 11400000, guid: 8554aca405256c246b06e39932ccb64c, type: 2}
+  start: {fileID: 11400000, guid: 439cfc5aa763be24f87d7f56650e8bde, type: 2}
 --- !u!95 &720427371
 Animator:
   serializedVersion: 3

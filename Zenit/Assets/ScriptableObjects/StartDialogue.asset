@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ebcf51387234134c8351347fcc60475, type: 3}
   m_Name: StartDialogue
   m_EditorClassIdentifier: 
-  initialValue: 0
+  initialValue: 1
