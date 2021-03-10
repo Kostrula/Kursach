@@ -4,13 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class DialogeTrigger : MonoBehaviour
+public class DialogeTrigger : Interactable
 {
     public Dialogue dialogue;
-    private bool playerInRange;
-    public Signal contextOn;
-    public Signal contextOff;
-
 
     void Update()
     {
@@ -25,20 +21,4 @@ public class DialogeTrigger : MonoBehaviour
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
-            playerInRange = true;
-            contextOn.Raise();
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collider)
-    {
-        if (collider.CompareTag("Player"))
-        {
-            contextOff.Raise();
-            playerInRange = false;
-        }
-    }
 }

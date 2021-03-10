@@ -22,6 +22,8 @@ public class HeroMovement : MonoBehaviour
     public Signal playerHealthSingal;
     public VectorValue startingPosition;
     public BoolValue start;
+    public Inventory playerInventory;
+    public SpriteRenderer pickItemSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -35,8 +37,12 @@ public class HeroMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
+        if (currentState == PlayerState.interact)
+        {
+            return;
+        }
         start.initialValue = false;
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
@@ -58,7 +64,31 @@ public class HeroMovement : MonoBehaviour
         yield return null;
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(0.3f);
-        currentState = PlayerState.walk;
+        if (currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
+    }
+
+    public void RaiseItem()
+    {
+        if (playerInventory.currentItem != null)
+        {
+            if (currentState != PlayerState.interact)
+            {
+                pickItemSprite.sprite = playerInventory.currentItem.itemSprite;
+                animator.SetBool("pickItem", true);
+                currentState = PlayerState.interact;
+
+            }
+            else
+            {
+                animator.SetBool("pickItem", false);
+                currentState = PlayerState.idle;
+                pickItemSprite.sprite = null;
+                playerInventory.currentItem = null;
+            }
+        }
     }
 
     void UpdateAnimationAndMove()
