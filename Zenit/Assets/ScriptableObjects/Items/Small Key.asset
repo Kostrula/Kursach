@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4142c97a7f35e684abd8cf6969e3387d, type: 3}
   m_Name: Small Key
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300000, guid: bda6085538e1d5d49bcc5d116ac32677, type: 3}
+  itemSprite: {fileID: 5762192191119477542, guid: 6e03c2579e71768488daeca296966f15, type: 3}
   itemDescription: "\u042D\u0442\u043E \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0439
     \u043A\u043B\u044E\u0447. \u0412\u043E\u0437\u043C\u043E\u0436\u043D\u043E \u043E\u043D
     \u043F\u043E\u0434\u043E\u0439\u0434\u0435\u0442 \u043A \u043A\u0430\u043A\u043E\u0439-\u043D\u0438\u0431\u0434\u0443\u044C

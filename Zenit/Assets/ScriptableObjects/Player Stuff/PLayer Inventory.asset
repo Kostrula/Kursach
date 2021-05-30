@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: PLayer Inventory
   m_EditorClassIdentifier: 
   currentItem: {fileID: 0}
-  items: []
-  numberOfKeys: 2
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  numberOfKeys: 0
+  coins: 0
+  maxMagic: 10
+  currentMagic: 10

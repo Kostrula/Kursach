@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start Menu.unity
+    guid: 7902d27629db10744a8889d1885c9600
+  - enabled: 1
     path: Assets/Scenes/Ar's_House.unity
     guid: c76398b3d0485104e8e080ba7c836cb3
   - enabled: 1
@@ -14,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Storehouse.unity
     guid: 77e0e96fdfb622b44af24e102fdf83e0
+  - enabled: 1
+    path: Assets/Scenes/Basement.unity
+    guid: a148d8f92e164f04783379154853d838
   m_configObjects: {}

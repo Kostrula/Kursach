@@ -14,6 +14,7 @@ public class Door : Interactable
     [Header("Door variables")]
     public DoorType doorType;
     public bool open = false;
+    [SerializeField] private InventoryItem key;
     public Inventory playerInventory;
     public SpriteRenderer doorSprite;
     public Sprite opneDoorSprite;
@@ -30,6 +31,7 @@ public class Door : Interactable
                 if(playerInventory.numberOfKeys > 0)
                 {
                     playerInventory.numberOfKeys--;
+                    key.DecreaseAmount(1);
                     Open();
                 }
             }

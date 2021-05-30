@@ -13,17 +13,41 @@ public enum PlayerState
 
 public class HeroMovement : MonoBehaviour
 {
-    public PlayerState currentState;
-    public float speed;
     private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
+
+    [Header("Movement")]
+    public PlayerState currentState;
+    public float speed;
+    public VectorValue startingPosition;
+
+    [Header("Health")]
     public FloatValue currentHealth;
     public Signal playerHealthSingal;
-    public VectorValue startingPosition;
-    public BoolValue start;
+    
+    
+    [Header("Inventory")]
     public Inventory playerInventory;
     public SpriteRenderer pickItemSprite;
+    public Signal decreaseMagic;
+    
+
+    [Header("Projectile Staff")]
+    public GameObject projecttile;
+    public Item bow;
+
+    [Header("Atacked")]
+    public Signal playerHit;
+
+    [Header("IFrame Stuff")]
+    public Color flashColor;
+    public Color regularColor;
+    public float flashDuration;
+    public int numberOfFlashes;
+    public Collider2D triggerCollider;
+    public SpriteRenderer mySprite;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,13 +67,19 @@ public class HeroMovement : MonoBehaviour
         {
             return;
         }
-        start.initialValue = false;
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
         if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
             StartCoroutine(AttackCo());
+        }
+        else if (Input.GetButtonDown("Second Weapon") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        {
+            if (playerInventory.CheckForItem(bow))
+            {
+                StartCoroutine(SecondAttackCo());
+            }
         }
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
@@ -68,6 +98,39 @@ public class HeroMovement : MonoBehaviour
         {
             currentState = PlayerState.walk;
         }
+    }
+
+    private IEnumerator SecondAttackCo()
+    {
+        //animator.SetBool("attacking", true);
+        currentState = PlayerState.attack;
+        yield return null;
+        MakeArrow();
+        //animator.SetBool("attacking", false);
+        yield return new WaitForSeconds(0.3f);
+        if (currentState != PlayerState.interact)
+        {
+            currentState = PlayerState.walk;
+        }
+    }
+
+    private void MakeArrow()
+    {
+        if (playerInventory.currentMagic > 0)
+        {
+           
+            Vector2 temp = new Vector2(animator.GetFloat("moveX"), animator.GetFloat("moveY"));
+            Arrow arrow = Instantiate(projecttile, transform.position, Quaternion.identity).GetComponent<Arrow>();
+            arrow.Setup(temp, ChooseArrowDirection());
+            playerInventory.ReduceMagic(arrow.magicCost);
+            decreaseMagic.Raise();
+        }
+    }
+
+    Vector3 ChooseArrowDirection()
+    {
+        float temp = Mathf.Atan2(animator.GetFloat("moveY"), animator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        return new Vector3(0, 0, temp);
     }
 
     public void RaiseItem()
@@ -96,6 +159,8 @@ public class HeroMovement : MonoBehaviour
         if (change != Vector3.zero)
         {
             MoveCharacter();
+            change.x = Mathf.Round(change.x);
+            change.y = Mathf.Round(change.y);
             animator.SetFloat("moveX", change.x);
             animator.SetFloat("moveY", change.y);
             animator.SetBool("moving", true);
@@ -128,13 +193,29 @@ public class HeroMovement : MonoBehaviour
 
     private IEnumerator KnockCo(float knockTime)
     {
+        playerHit.Raise();
         if (myRigidbody != null)
         {
+            StartCoroutine(FlashCo());
             yield return new WaitForSeconds(knockTime);
             myRigidbody.velocity = Vector2.zero;
             currentState = PlayerState.idle;
-
-
+            myRigidbody.velocity = Vector2.zero;
         }
+    }
+
+    private IEnumerator FlashCo()
+    {
+        int temp = 0;
+        triggerCollider.enabled = false;
+        while (temp < numberOfFlashes)
+        {
+            mySprite.color = flashColor;
+            yield return new WaitForSeconds(flashDuration);
+            mySprite.color = regularColor;
+            yield return new WaitForSeconds(flashDuration);
+            temp++;
+        }
+        triggerCollider.enabled = true;
     }
 }

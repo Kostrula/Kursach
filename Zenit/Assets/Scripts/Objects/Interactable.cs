@@ -28,6 +28,8 @@ public class Interactable : MonoBehaviour
             context.Raise();
         }
     }
+
+
     private void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.CompareTag("Player") && !collider.isTrigger)

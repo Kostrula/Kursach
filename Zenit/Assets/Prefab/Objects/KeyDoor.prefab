@@ -184,7 +184,8 @@ MonoBehaviour:
   context: {fileID: 11400000, guid: 0a8e3ba94a9d6874ba1db2b5f30ad72f, type: 2}
   doorType: 0
   open: 0
-  playerInventory: {fileID: 11400000, guid: 4855296d2595f454bacbd235dc6fee1c, type: 2}
+  key: {fileID: 11400000, guid: 64ded169e1ba0e44383e17b97c63c32e, type: 2}
+  playerInventory: {fileID: 11400000, guid: 219c0c568df59f84790c6eb0f2103b92, type: 2}
   doorSprite: {fileID: 1747827919762352022}
   opneDoorSprite: {fileID: 3028980172476509402, guid: 2a52fe8605bf61b458cbf832c0c47194, type: 3}
   phisicsCollider: {fileID: 1747827919762352023}

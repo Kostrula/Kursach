@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa84d91f266b874c8fe427bf8f4ae5d, type: 3}
+  m_Name: Key
+  m_EditorClassIdentifier: 
+  itemName: "\u041A\u043B\u044E\u0447"
+  itemDescription: "\u0421 \u0432\u0438\u0434\u0443 \u043E\u0431\u044B\u0447\u043D\u044B\u0439
+    \u043A\u043B\u044E\u0447. \u041C\u043E\u0436\u0435\u0442 \u043F\u043E\u0434\u043E\u0439\u0442\u0438
+    \u043A \u043A\u0430\u043A\u043E\u0439-\u043D\u0438\u0431\u0443\u0434\u044C \u0434\u0432\u0435\u0440\u0438."
+  itemImage: {fileID: 5762192191119477542, guid: 6e03c2579e71768488daeca296966f15, type: 3}
+  numberHeld: 0
+  usable: 0
+  unique: 1
+  thisEnvent:
+    m_PersistentCalls:
+      m_Calls: []
